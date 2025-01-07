@@ -1,0 +1,6 @@
+High leverl overview of how the internet works
+
+  - What is it? A global network of networks
+  - the internet uses something called routing so that you don't need to have every single computer connected every other computer connected to the internet.
+  - The internet is the infratructure that makes communication of many different types (services like email, www...) possible.
+  

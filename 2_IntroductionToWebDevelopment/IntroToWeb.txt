@@ -1,0 +1,21 @@
+The world wild Web
+
+- Information system that allows sharing of information over the internet.
+- The web is an information system and it is a portion of the internet
+- The Web works through HTTP (Hypertext transfer protocol)
+  - It is a set of standardized set of rules of communication
+    - Generate a request to a URL
+    - Server responds with content
+    - Browser displays the information
+
+- A web server is a computer that can satisfy requests on the Web
+  - "Server" is also used to refer to the software running on the computer.
+
+- The Request - Responce cycle:
+  - A server does not respond with a coplete web page. It responds with intructions that a browser can understand.
+  - Instructions can be viewed in chrome by right clicking and clicking "view page source"
+
+- Front-end vs Back-end:
+ - front-end: client side 
+ - back-end: server side 
+
