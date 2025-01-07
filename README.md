@@ -5,3 +5,6 @@ The repository is public and can be viewed by anyone. So not push private or sen
 
 # Course coding exercise solutions
 Exercise solutions can be found here: https://github.com/Colt/TheWebDeveloperBootcampSolutions
+
+# Trello board that accompanies the course
+Find the Trello board here: https://trello.com/b/0PVRE1XQ/web-developer-bootcamp
