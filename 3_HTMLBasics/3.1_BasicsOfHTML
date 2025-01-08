@@ -2,3 +2,10 @@ HTML is a markup language
 HTML consists of elements that are wrapped in tags
 - An openenig tag and most of the time also a closing tag
 <tag> </closing tag>
+
+<p></p> is a paragraph tag
+<h1></h1> is the first header tag. Header tags can go from 1 to 6
+<ol></ol> is an ordered list tag
+<ul></ul> is an unordered list tag
+<b></b> is bold
+<br> is a break for a new line and does not need a closing tag
