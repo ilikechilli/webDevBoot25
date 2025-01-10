@@ -51,7 +51,7 @@
     </tbody>
   </table>
 
-<h2>Colspan and rowspan</h2>
+<h3>Colspan and rowspan</h3>
 <p>The table above is semantically correct but not yet styled. It is also possible to have several columns or sows span differently using the &lt;colspan&gt; and &lt;rowspan&gt; elements.</p>
 <p>The table below got rid of the maximum weight of the birds but now displays the weight in kg and pounds in their own separate column. These two columns however are part of a parent column that groups the weights.</p>
 
@@ -88,5 +88,91 @@
     </tr>
   </tbody>
 </table>
+
+<h2>Forms</h2>
+<p>Forms are all over the place on the web as all kinds of inputs. Forms are initialized with the &lt;form&gt; element and usually contain &lt;input&gt; and &lt;label&gt; elements. Common input types are:</p>
+<ul>
+  <li>text</li>
+  <li>button</li>
+  <li>radio</li>
+  <li>checkboxes</li>
+  <li>password</li>
+  <li>color</li>
+  <li>number</li>
+  <li>time</li>
+  <li>date</li>
+</ul>
+<p>The form element will also specify what to do with the data. The parent form element is where we specify what data should be sent where.</p>
+
+<p>Forms have many attributes but the most important ones are "action" and "method". The action specifies where the user needs to go once submitting the form and the method specifies what needs to happen (GET, POST...) In the form demo below, the action is "/chickens".</p>
+
+<h3>Forms Demo:</h3>
+
+<form action="/chickens">
+  <input type="text" placeholder="text">
+  <br>
+  <input type="password" placeholder="password">
+  <br>
+  <input type="color">
+  <br>
+  <input type="number">
+  <br>
+  <input type="time">
+  <br>
+  <input type="date">
+</form>
+
+<p>The above form includes a text input fiels, a password input field, a color picker, a number entry, a time entry and a date entry. Notice also that the text and password fields have placeholder attributes that inform the user what should go in the field. Types are contextual. A password type is really not all that different from a text type except that it obscures the input with asterisks so that onlookers can not see what is being typed. Not all input types support a placeholder though. </p>
+<h3>Labels</h3>
+<p>The form shown above can use placeholders to inform what should be done but sometimes that is not possible. For example, it is not possible to put a placeholder text in a checkbox. That's why labels can be used in conjunction with an input. The form below is identical to the form above, except this time all the inputs are associated with a label.</p>
+<form action="/chickens">
+  <label for="username">Text</label>
+  <input type="text" placeholder="text" id="username">
+  <br>
+  <label for="password">Password</label>
+  <input type="password" placeholder="password" id="password">
+  <br>
+  <label for="colorpicker">Color Picker</label>
+  <input type="color" id="colorpicker">
+  <br>
+  <label for="numberinput">Number input</label>
+  <input type="number" id="numberinput">
+  <br>
+  <label for="time">Time</label>
+  <input type="time" id="time">
+  <br>
+  <label for="date">Date</label>
+  <input type="date" id="date">
+  <br>
+  <label for="mycheck">Date</label>
+  <input name="mycheck" id="mycheck" type="checkbox">
+</form>
+
+<p>Labels may seem like simple elements but they can be very powerful but only if we first introduce two new attributes to the input tag, namely the "name" and "id" attributes.</p>
+<p>The id attribute assigns a specific "behind-the-scenes" id to an input. Now, when looking at the label element, we will often give it a "for" attribute which will point to the name of the input that the label is for. When to elements are associated through the "id" and "for" attributes, it also makes the label clickable to control the input. The name attribute is used later when sending information over the web. But we'll get to that in a short while</p>
+
+<h3>Buttons</h3>
+<p>The button element represents a clickable button. If the button is present within a form it will submit the form by default. Even if multiple buttons are present, they will all submit the form in which they are present. Moving a button outside of a form, it won't do anything. If there is a button inside a form that should not submit the form, a type attribute should be added to the "button"</p>
+<form action="/chickens">
+  <label for="text2">Name</label>
+  <input type="text" id="text2">
+  <button>Submit</button>
+  <button type="button">regular button (will not submit)</button>
+  <br>
+</form>
+
+<h3>The name attribute</h3>
+<p>We've seen that we can add labels to inputs and that we can use buttons to submit forms. But what happens when a form is submitted anyway? For that, we'll first need to introduce the <b>"name"</b>  attribute which is given to an <b>&lt;input&gt;</b> tag</p>
+<p>Once submitting, the inputs are added to the body of the request (See the URL in the browser).In the example form below, if you choose to fill in the the form and check the checkbox and finally submit, you will see that the URL changes to the "action" alongside the names behind it. This is sometimes referred to as the body of the request.</p>
+<form action="/chickens">
+  <label for="username">Name</label>
+  <input type="text" id="username" name="username">
+  <br>
+  <label for="likechickens">Do you like chickens?</label>
+  <input type="checkbox" id="likechickens" name="likechickens">
+  <br>
+  <button>Submit</button>
+</form>
+<p>When sending data through a URL it is important to know that the data will be visible so ideally, this should not show up when submitting passwords and other sensitive information. There are ways around this that will be looked at in later lessons.</p>
 </body>
 </html>
