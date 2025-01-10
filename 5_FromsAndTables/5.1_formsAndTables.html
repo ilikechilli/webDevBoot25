@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms and Tables
+  </title>
+</head>
+<body>
+  <h1>Forms and Tables</h1>
+  <h2>Tables</h2>
+  <p>Html allows the creation of tables. Theses tables should be used to display tabular data and not to structure a web page since there are much better tools for that.</p>
+  <p>Tables exist within a &lt;table&gt; element and can take several children elements, some of which are required for the table creation</p>
+  <ul>
+    <li>TR = A row of data</li>
+    <li>TD = A single cell of data</li>
+    <li>T</li>
+    <li>thead</li>
+    <li>tfoot</li>
+    <li></li>
+  </ul>
+  <p>The following is an example of a table listing large birds</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type of bird</th>
+        <th>Average weight kg (lbs)</th>
+        <th>Max weight</th>
+        <th>Flighted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ostrich</td>
+        <td>104kg (230 lbs)</td>
+        <td>156.4 kg</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>Somali Ostrich</td>
+        <td>90 kg (200 lbs)</td>
+        <td>130 kg</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>Wild turkey</td>
+        <td>13.5</td>
+        <td>39</td>
+        <td>yes</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>Colspan and rowspan</h2>
+<p>The table above is semantically correct but not yet styled. It is also possible to have several columns or sows span differently using the &lt;colspan&gt; and &lt;rowspan&gt; elements.</p>
+<p>The table below got rid of the maximum weight of the birds but now displays the weight in kg and pounds in their own separate column. These two columns however are part of a parent column that groups the weights.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Type of bird</th>
+      <th colspan="2">Average mass</th>
+      <th rowspan="2">Flighted</th>
+    </tr>
+    <tr>
+      <th>KGS</th>
+      <th>LBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ostrich</td>
+      <td>104 kg</td>
+      <td>230 lbs</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Somali Ostrich</td>
+      <td>90 kg (200 lbs)</td>
+      <td>200 lbs</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Wild turkey</td>
+      <td>13.5</td>
+      <td>29 lbs</td>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
