@@ -182,5 +182,65 @@
   <input type="text" name="q">
   <button>Search google!</button>
 </form>
+
+<h2>Checkboxes, Radio buttons and Selects</h2>
+<form action="/doSomething">
+  <label for="myCheck1">Click this checkbox</label>
+  <input type="checkbox" name="myCheck1" id="myCheck1">
+  <br>
+  <label for="prechecked">Pre-checked checkbox</label>
+  <input type="checkbox" name="prechecked" id="prechecked" checked>
+  <br>
+  <label for="myRadio1">Radio Buttons</label>
+  <input type="radio" name="myRadio" id="myRadio1" value="one">
+  <input type="radio" name="myRadio" id="myRadio1" value="two">
+  <input type="radio" name="myRadio" id="myRadio1" value="three">
+  <br>
+  <label for="mySelect1">Select box</label>
+  <select name="option" id="mySelect1">
+    <option value="">Select an option</option>
+    <option value="First option">First option</option>
+    <option value="Second option">Second option</option>
+    <option value="Third option">Third option</option>
+  </select>
+  <br>
+  <button>submit</button>
+</form>
+
+<p>Radio buttons take advantage of both the name and id attribute. All radio  buttons with the same name attribute will make it so that only a single button can be selected for that name (they are grouped). So if multiple radio buttons have the same name only one can be checked. If you then check another radio button with the same name attribute, the previously checked button will no longer be checked. In order to make sure that the radio button actually submits something it should also have an ID that is linked to a label that has a value. The value can be added as a separate attribute but will not be displayed to a user.</p>
+<p>Select inputs have a slightly different way of operation. It does not take an input tag but the &lt;select&gt; tag which can include any number of &lt;option&gt; tags within it. Each option can have a value which is then sent through when submitting. The selected value will be associated to the name (not the idea) or the select tag.</p>
+
+<h2>Range and Text-Area</h2>
+<p>Range inputs provide a slider that a user can use to select a previously determined range of values using the "min" and "max" attributes. These attributes are also useful when using a number input when you want to constrain the number that someone can send through.</p>
+<form action="/rangeSelection">
+  <label for="myrange1">Select a range</label>
+  <input type="range" name="myrange1" id="myrange1" min="1" max="10">
+  <br>
+  <label for="mynum1">Select a number</label>
+  <input type="number" name="mynum1" id="mynum1" min="1" max="100">
+  <br>
+  <button>Submit</button>
+</form>
+
+  <p>textareas are not an input but have their own tag &lt;textarea&gt; but they do function as an input. The difference with a simple text input is that we can control the size of the text input box! To set the size, we can use "rows" and "cols" attributes for the text area.</p>
+  <form action="/textArea">
+    <label for="mytextarea1">Type something</label>
+    <br>
+    <textarea name="mytextarea1" id="mytextarea1" rows="10" cols="50"></textarea>
+    <br>
+    <button>Submit</button>
+  </form>
+</form>
+
+<h2>Html form validation (Built in validations)</h2>
+<p>Sometimes there are certain requirements for inputs. For example, is an email valid? Does a password contain certain character types? Many validations are done server side using javascript but there are also built in validations in the browser.</p>
+<p>Some validations can include</p>
+<ul>
+  <li>required = This ensures that an input is provided before submitting.</li>
+  <li>minlength = the minimum length of text</li>
+  <li>maxlength = the maximum length of text</li>
+  <li></li>
+  <li></li>
+</ul>
 </body>
 </html>
