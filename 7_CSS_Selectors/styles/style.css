@@ -1,0 +1,38 @@
+html {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: lightgrey;
+}
+
+h1 {
+  color: rgba(56, 48, 48, 0.977);
+  border: 1px solid black;
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+  letter-spacing: 0.07em;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  margin: 5px 0 5px 0;
+}
+
+#IDSelectorParagraph {
+  color: darkslateblue;
+}
+
+.redText {
+  color: red;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <h1>CSS Selectors</h1>
+  <p>This page will cover a wide range of different CSS selectors and a short section about <b>CSS specificity</b>. The most important selectors that will be discussed are as follows:</p>
+  <b>
+    <ul>
+      <li>Element selectors</li>
+      <li>Class Selectors (.)</li>
+      <li>ID selectors (#)</li>
+      <li>Descendent selectors</li>
+    </ul>
+  </b>
+  <p>Other selectors that are worth knowing about are:</p>
+  <ul>
+    <li>Adjacent selectors</li>
+    <li>Direct descendent selectors</li>
+    <li>Attribute selectors</li>
+    <li>Pseudo elements</li>
+    <li>Pseudo classes</li>
+  </ul>
+  
+  <h2>Universal and Element selectors</h2>
+  <p>The universal selector is "*" and it selects EVERYTHING</p>
+  <p>Element selectors select every html element of a certain type. For example, all paragraphs are selected using "p"</p>
+  <p>Selector lists can be made to select multiple types of tags and are accomplished by using a comma between selectors. For example: "h1, h2 {}" will select all h1 and h2 headers and a style can be applied between the curly braces for both header types.</p>
+
+  <h2>The ID selector</h2>
+  <p id="IDSelectorParagraph">Elements with a specific ID can be selected by using the # symbol followed by the ID. This specific paragraph had an ID of "IDSelectorParagraph" and has a specific style applied to it that makes the text color darkslateblue. It will only apply to this paragraph because only this paragraph has this ID. The selector in the CSS file is <b>"#IDSelectorParagraph {color: darkslateblue}"</b>.</p>
+
+  <h2>The Class Selector</h2>
+  <p>Class selectors like ID's can be added to our markup (html) with the biggest difference that is can be applied to multiple elements (A class of elements). Classes can be targetted in CSS using a dot before the class name. For example, if I make a class in my html that is named "redText", I can target it in CSS using ".redText{}"</p>
+  <p>Let's say we create a CSS class like redText, we can apply it to <span class="redText">this</span> by wrapping 'this' in a span and adding the class attribute to it with the value redText and then add it in the CSS. This should then show up as red. </p>
+
+  <h2>Descendent selectors</h2>
+  <p>Descendent selectors use a selector followed by a <span style="font-weight: bold; font-size: large;">space</span> and another selector that is a descendent of the first selector. Note that this is not the same as a child (or direct child) selector. Descendent selectors do not have to be directly within the ancestor selector.</p>
+
+  <h2>Adjacent Selector and Direct-Descendent Selector</h2>
+  <p>Adjacent selectors both reside within a common  parent selector and follow eachother directly. Imagine I have a div containing an h3 header and a paragraph right after it. These are Adjacent and can be selected by using "h3 + p {}"</p>
+  <p>Direct child selectors are a bit like Descendent selectors but the child element needs to reside within the parent element directly. It can be targeted using the "&gt;" symbol like this "parent &gt; child {}"</p>
+
+</body>
+</html>
