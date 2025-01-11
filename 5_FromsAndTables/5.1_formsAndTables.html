@@ -174,5 +174,13 @@
   <button>Submit</button>
 </form>
 <p>When sending data through a URL it is important to know that the data will be visible so ideally, this should not show up when submitting passwords and other sensitive information. There are ways around this that will be looked at in later lessons.</p>
+
+<h2>Hijacking google searches</h2>
+<p>Forms do not need to only make requests to your own server. You can use the method to make requests to other websites as well.</p>
+<p>The example below demonstrates how we can implement a google query into our own website. The action simply needs to include the whole URL to google and the search method. Then the input should include the relevant name that will be recognized by google</p>
+<form action="https://www.google.com/search">
+  <input type="text" name="q">
+  <button>Search google!</button>
+</form>
 </body>
 </html>
