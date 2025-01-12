@@ -45,5 +45,54 @@
   <p>Adjacent selectors both reside within a common  parent selector and follow eachother directly. Imagine I have a div containing an h3 header and a paragraph right after it. These are Adjacent and can be selected by using "h3 + p {}"</p>
   <p>Direct child selectors are a bit like Descendent selectors but the child element needs to reside within the parent element directly. It can be targeted using the "&gt;" symbol like this "parent &gt; child {}"</p>
 
+  <h2>The attribute selector</h2>
+  <p>The attribute selector allows the selection of elements based on a specific attribute. This is particularly useful with the &lt;input&gt; element because besed on the "type" attribute, the element can have very different functions. So using the attribute selector, we can select a single type of input element to style. For example: "<B>input[type="text"]{}</B>"" will target only the text input elements.</p>
+
+  <h2>Pseudo Classes</h2>
+  <p>They are keywords added to the end of a selector that indicate a specific state of the element. They all start with a colon and one of the most commonly used ones is :hover.</p>
+  <p>Other examples of anchor tags are:</p>
+  <ul id="pseudoList">
+    <li id="hoverBullet">element:hover hovering over this element with your mouse will turn it blue</li>
+    <li id="activeBullet">element:active While clicking on this element you can change its style. Useful for buttons when being clicked. Click this paragraph to see it in action.</li>
+    <li>element:checed This is useful for checkboxes or radio buttons that are checked.</li>
+    <li>element:nth-of-type this selects elements among a group of sibling elements based on their (numbered position) Notice how in this list there are a few entries that are differently styled? That is nth-of-type at work!</li>
+    <li>... and many more. See MDN docs for more information on Pseudo Classes</li>
+  </ul>
+
+  <p>A bit more on the nth-of-type pseudo selector. This selector takes an argument. Simply providing a number as an argument will target the element that is numbered at that position in the list. But we can also provide a repeating sequence by providing a number followed by "n". In that way, passing 2n would target every other element. Providing 3n will target every third element in the list and so on. You can also provide the keywords even or odd or you can tartget odd elements with (2n - 1).</p>
+
+  <h2>Pseudo Elements</h2>
+  <p>Pseudo Elements are keywords added to a selector that lets you modify a certain part of the selected elements. They are recognized by the double colon <b>"selector::pseudoselector"</b>. There are not a lot of pseudo elements but some include:</p>
+  <ul>
+    <li>::first-letter which targets the first letter so that it can be styled separate.</li>
+    <li>::first-line</li>
+    <li>::selection (targets highlighted elements)</li>
+    <li>::before</li>
+    <li>::after</li>
+  </ul>
+
+  <p id="beforeDemo">This paragraph demonstrates a combination of the psuedo-class ":hover" and the pseudo-element "::before"</p>
+  <p id="afterDemo">This paragraph demonstrates a combination of the psuedo-class ":hover" and the pseudo-element "::after"</p>
+  <p id="selectedAfter">And try highlighting some text in this paragraph</p>
+
+  <h2>The CSS Cascade</h2>
+  <p>The cascade refers to the order that styles are applied. If an element is targeted by more than one CSS rule, the last rule to be typed will be applied and the previous rules will be ignored, or more accurately; overwritten. The order also matters if there are more than one stylesheets.</p>
+
+  <h2>Css specificity</h2>
+  <p>Order matters but the "type of CSS also matters" Inline CSS has precedence over Styled-tag CSS and STyled-tag CSS has precedence over an external CSS file!</p>
+  <p>If there is a conflict of more than one style that are competing for element style the precedence is as followed:</p>
+  <ol>
+    <li>More element selectors</li>
+    <li>ID beats class</li>
+    <li>Class beats elements</li>
+  </ol>
+
+  <h2>Inline Styles and !Important</h2>
+  <p>Inline styles are more specific than ID's in external stylesheets. Inline styles are not recommended but are a valid way of styling nonetheless.</p>
+  <p>The important rule is generally not recommended to be used and it is the most specific rule possible. It will override everything else!</p>
+
+  <h2>CSS inheritance</h2>
+  <p>Some CSS properties will be inherited by child elements even if those styles are not set to the child explicitely</p>
+  <p>For example, if the body is given a color property of red, then all the text in the paragraphs in the body are going to be red because it is inherited from the body. Certain elements can inherit certain styles from the closest parent where the style is set.</p>
 </body>
 </html>

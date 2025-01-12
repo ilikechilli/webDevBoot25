@@ -36,3 +36,34 @@ li {
 .redText {
   color: red;
 }
+
+#hoverBullet:hover {
+  color: blue;
+}
+
+#activeBullet:active {
+  color: red;
+  text-decoration: underline;
+}
+
+#pseudoList>li:nth-of-type(2n) {
+  color: darkgreen;
+  font-size: 120%;
+}
+
+#beforeDemo:hover::before {
+  content: "Check this out! --> ";
+  color: red;
+  font-weight: bold;
+}
+#afterDemo:hover::after {
+  content: "--> Get the picture?";
+  color: green;
+  font-weight: bold;
+  text-decoration: underline wavy blue;
+}
+#selectedAfter:active::after {
+  content: "  This only appears if while clicking the paragraph!";
+  color: red;
+  font-weight: bold;
+}
