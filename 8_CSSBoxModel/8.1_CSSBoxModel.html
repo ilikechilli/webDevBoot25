@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1>CSS Box Model</h1>
+  <p>The properties of the CSS box are:</p>
+  <ul>
+    <li>margin</li>
+    <li>padding</li>
+    <li>border</li>
+    <li>widht and height</li>
+  </ul>
+  <p>Closely related topics are:</p>
+  <ul>
+    <li>Display Property</li>
+    <li>Units: Percentage, EM and REM</li>
+    <li>Border radius</li>
+  </ul>
+
+  <p class="keyPoint">Everything in CSS can be considered a box defined by margin, padding, border, width, height and its display property</p>
+
+  <h2>Width and height</h2>
+  <p>Width and height control the inner content area (exception for border box...) of an element. Most (if not all) Block type elements will have a width that spans the width of the parent element (or the page). This can be overwritten by explicitely setting the width for that element using CSS. For example, a standard paragraph element will span the width of the page but can be made shorter if required.</p>
+  <p>If the width and height parameters are set too low, the content may overflow and cause strange effects.</p>
+  <p>Other properties will also only be applied to the content area such as the background color.</p>
+
+  <h2>Border</h2>
+  <p>The border is the border around an element.</p>
+  <p>Borders are fairly self-explanatory but they can be used to very good effect to make things clear or to point things out on a web-page.</p>
+  <p>Borders can be modified in thickness, color, style (dotted, dashed, full...) using the respective properties.</p>
+  <p>By default, an element size does not include the border but there is a property called box-sizing set to <b>"border-box"</b> which will cause the size of the element to go from border to border.</p>
+  <p>Take a look at the below four boxes:</p>
+  <div id="borderDemoBound">
+    <div id="borderDemo1"></div>
+    <div id="borderDemo2"></div>
+    <div id="borderDemo3"></div>
+    <div id="borderDemo4"></div>
+</div>
+  
+  <p>The first three boxes are set to border box so that the border thickness does not affect the "outside" size of the boxes. Despite having different border thicknesses, the boxes are all the same "outside"-size because of this property!</p>
+  <p>The fourth, blue box has the same width and height set as the previous boxes but does not have the box-sizing property set to "border-box" so the thickness of the border is "added" to the overall size of the box it seems. This is an important distinction to keep in mind.</p>
+  <p>Finally, note the different colors and styles of the borders which are "solid black", "dotted red", "dashed green" and "solid blue" respectively. The blue box also has a border radius applied to it. Setting the radius to 50% will create a circle!</p>
+</body>
+
+<h2>Padding</h2>
+<p>Padding is set between the content and the border of an element.</p>
+
+<h2>Margin</h2>
+<p>Margin is like padding but on the outside of the border... Nuff Said!</p>
+
+<h2>The Display Property</h2>
+<p>We've discussed inline and block style elements briefly in a previous section but there is more to be said about these property.</p>
+<p>The first is about inline elements. If we try to apply a width that is wider than the content to an inline element, it will not apply because of the fact that an inline element will only fill the width that is required by the content! However, padding will be respected but it will not necessarily push other content away. Instead it may overlap here and there. The same goes for margin. It is respected but only in some cases. Lets take an example:</p>
+<p style="border: 1px solid black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur beatae obcaecati sit ex dignissimos sapiente excepturi quia iste dolore totam ducimus, eveniet reiciendis sequi magnam fugiat tenetur nesciunt sed vero.
+Saepe debitis sapiente ut repudiandae. Dolor temporibus modi ipsa nobis voluptatem magnam repellat laborum odit magni aliquam? Omnis porro dolores saepe tempora consequatur officiis ad, voluptate quam eveniet architecto sequi.
+Quidem ut mollitia, iusto, animi nemo qui <span id="displaySpan">I Am Span</span> doloremque sequi alias eius quam vero perferendis quisquam quibusdam esse. Odit debitis dignissimos asperiores ab reiciendis ratione veritatis, culpa non, quibusdam delectus expedita.
+Id culpa quibusdam placeat ut fugit modi ipsa fuga incidunt temporibus blanditiis a voluptates quod voluptate autem, sequi excepturi? Asperiores reprehenderit dolorem et nihil dolores itaque deleniti consectetur dolore ipsum!
+Placeat, delectus laudantium repellendus voluptas ex, unde ducimus a architecto blanditiis reprehenderit ipsum consequatur ratione! Blanditiis repellendus repudiandae voluptas tenetur ipsa, aspernatur officiis consectetur debitis voluptates maxime autem, asperiores iusto.</p>
+
+<p>The gibberish above includes a span within a paragraph which has a very ugly background color just to make it pop. The span has a width of 500px which is clearly not applied. It has a padding of 20px all around but it only seems to push away content in the "inline" direction (horizontally). The padding is also applied vertically but it's not pushing the lines above away! The exact same goes for the margin, the margin pushed content away horizontally but is not even noticeable in the vertical direction. That is because of the display property of a span that is set to inline by default. I.e. The css for the example above did not explicitely set to inline, it is assumed to be inline by default because it is a span element.</p>
+<p>The point is that certain box styling elements will behave strangely (or will simply not be applied) because of the type of element.</p>
+<p>Block level elements will respect width and height (unlike with inline elements). Padding and margin will also be respected in every direction! inline or block displayed elements behave differently.</p>
+
+<h3>Inline Block</h3>
+<p>Introducing the "Inline-block" type display type! This solves issues encountered by inline elements with regard to sizing. Inline-block elements will sit inline but can be sized as required!</p>
+
+<h3>Display: none</h3>
+<p>This hides the element and can be useful later when we get to javascript!</p>
+
+<h2>CSS Units revisited</h2>
+<h3>Relative units</h3>
+<p>Pixels are an absolute unit</p>
+<h4>Percentages</h4>
+<p>Setting the width of 50 sets the width of an element to 50% of the width of the <b>parent</b> element! So it is not the width of the whole page as it is displayed. Keep this in mind because nesting too much of this can cause weird stuff to happen.</p>
+
+<h2>EMs and REMs</h2>
+<h3>EM</h3>
+<p>EM represent the relative size compared to the parent element. EM's are used in two contexts! For font sizes, 1em equals the font size of the parent. <b>For other properties</b> 1em is equal to the computed font size of the element itself.</p>
+<p>Let's illustrate this with an example below. Where a paragraph sits within a div. I will set the font size of the div to 20 pixels and the font size of the paragraph to 2em. Since the paragraph is a child of the div, its font size will be 20 pixels or twice the size of the parent. But I have also set the margin of the paragraph to 1em. This margin size is not based on the the size of the parent but on the font size of the paragraph itself. So in this case 1em for the margin also represents 40 pixels.</p>
+<div style="font-size: 10px;">
+  <p style="font-size: 2em; margin: 1em">My font size is 2em and my margin is 1 em but they are both 40 pixels because the font size for my parent element is 10 pixels.</p>
+</div>
+<h3>REMs</h3>
+<p>REM is based on the font size of the root element and is very useful to avoid snowballing sizing effects when nesting multiple elements</p>
+
+</html>

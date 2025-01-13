@@ -29,3 +29,61 @@ li {
   margin: 5px 0 5px 0;
 }
 
+.keyPoint {
+  text-align: center;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  color:rgb(11, 11, 81);
+  border: 3px solid rgb(11, 11, 81);
+  margin: 1em 15% 1em 15%;
+  padding: 0.6em 0.3em;
+  border-radius: 0.6em;
+}
+
+#borderDemoBound {
+  text-align: center;
+}
+
+#borderDemo1 {
+  display: inline-block;
+  border: 5px solid black;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  margin-inline: 30px;
+}
+
+#borderDemo2 {
+  display: inline-block;
+  border: 8px dotted red;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  margin-inline: 30px;
+}
+
+#borderDemo3 {
+  display: inline-block;
+  border: 10px dashed green;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  margin-inline: 30px;
+}
+
+#borderDemo4 {
+  display: inline-block;
+  border: 14px solid blue;
+  border-radius: 25%;
+  width: 100px;
+  height: 100px;
+  margin-inline: 30px;
+}
+
+#displaySpan {
+  background-color: aquamarine;
+  padding: 20px;
+  margin: 30px;
+  width: 500px;
+}
