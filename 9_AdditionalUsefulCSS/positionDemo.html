@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstrating CSS Position</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/positionstyle.css">
+</head>
+<body>
+  <h1>CSS Position Demo</h1>
+  <section class="positiondemo" id="staticDemo">
+    <h2>Static</h2>
+    <div></div>
+    <div id="middle">
+    </div>
+    <div></div>
+  </section>
+
+  <section class="positiondemo" id="stickyDemo">
+    <h2>Sticky</h2>
+    <p>Sticky is not correctly demonstrated here because the containing block for the Blue square is not scrollable. Refer to MDN for more information in Sticky.</p>
+    <div></div>
+    <div id="middle">
+    </div>
+    <div></div>
+  </section>
+
+  <section class="positiondemo" id="relativeDemo">
+    <h2>Relative</h2>
+    <p>The middle box had its position set to relative. It will be positioned according to the normal document flow first and can then be repositioned using "top", "left", "right" and "bottom" relative to that initial position. I even had to introduce some breakes at the bottom of this section because otherwise the square would overlap the next header for Absolute. As you can see, this does not push away other content.</p>
+    <div></div>
+    <div id="middle">
+    </div>
+    <div></div>
+    <br>
+    <br>
+  </section>
+
+  <section class="positiondemo" id="absoluteDemo">
+    <h2>Absolute</h2>
+    <p>The green square is not in the normal document flow. In the html it is positioned in the middle of the two other squares but here that is clearly not the case. It is in fact positioned 500 pixels to the left and 1000 pixels from the top of the actual document (the page). It is not part of the normal document flow.</p>
+    <div></div>
+    <div id="middle">
+    </div>
+    <div></div>
+  </section>
+
+  <section class="positiondemo" id="fixedDemo">
+    <h2>Absolute</h2>
+    <p>See that abnoxious red square that has been bothering you during your visit to this page? That is a fixed square and it is positioned in the HTML between the two light-blue squared below but because it's position is fixed, it will always appear at a fixed position in the viewport, even when you scroll through the page.</p>
+    <div></div>
+    <div id="middle">
+    </div>
+    <div></div>
+  </section>
+  
+
+</body>
+</html>

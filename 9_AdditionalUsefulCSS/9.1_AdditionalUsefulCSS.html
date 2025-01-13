@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Additional Usefull CSS</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1>Additional Usefull CSS</h1>
+  <p>This section will deal with some additional useful CSS properties. The most important of which are bolded in the list below:</p>
+  <ul>
+    <li><b>Transitions</b></li>
+    <li><b>Position Property</b></li>
+    <li>Opacity and Alphy channel</li>
+    <li>Google Fonts</li>
+    <li>Additional Background properties</li>
+    <li>Transforms</li>
+  </ul>
+
+  <h2>Opacity and Alpha channel</h2>
+  <h3>Alpha</h3>
+  <p>Alpha channel is an addition to regular RGB colors and adds Alpha to the color which is transparancy.</p>
+  <p>Consider the example below where there is a div with a magenta background color. That div is populated by three other divs that have a white background color but with varying settings of transparancy or "Alpha" The top left inner square has an alpha setting is 1 (or 100%) and is not transparant at all, the top right square that has its transparancy set to 0.7 (or 70) and lets some of the background color of the parent div through and the lower left square has it set to 0.3 and lets much more of the magenta through:
+  </p>
+  <div id="alphaContainer">
+    <div class="alphaDemo" style="background-color: rgba(255, 255, 255, 1);"></div>
+    <div class="alphaDemo" style="background-color: rgba(255, 255, 255, 0.7);"></div>
+    <div class="alphaDemo" style="background-color: rgba(255, 255, 255, 0.3);"></div>
+  </div>
+
+  <h3>Opcity</h3>
+  <p>Opacity controls the opacity of an element but also of all its descendents. So if the element should include text, both the background color of the element and the text will be made (partly) transparant</p>
+
+  <h2>Position</h2>
+  <p>Position is confusing CSS property at first glance. It is very userfull nonetheless. It sets how an element is positioned in a document. It is the "top", "right", "left" and "bottom" properties which determine the final position of an element.</p>
+  <p>The five settings for position are:</p>
+  <ul>
+    <li>static (default): The Elements is positioned according to the normal flow of the document</li>
+    <li>relative: the element is positioned relative to itself after following the normal flow of the document. This one is a bit tricky but is well demonstrated on MDN</li>
+    <li>Absolute: The element is removed from the normal flow and is then positioned relative to its closest ancestor. Also tricky sometimes!</li>
+    <li>fixed: The element is removed from the normal flow and is positioned relative to the viewport</li>
+    <li>Sticky: The element is removed from the normal flow and is positioned relative to its nearest scrolling ancestor.</li>
+  </ul>
+  <p>It is difficult to demonstrate all the positions with elements because for some it would hinder the view of the overall page so please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">the MDN reference on "position"</a> for a great demo.</p>
+  <p>Update: I've attempted to create a demo for position <a href="./positionDemo.html">here</a></p>
+  <p>One more important point is that an absolute positioned element can be positioned within its parent container if that container is set to relative positioning first!</p>
+</body>
+</html>
