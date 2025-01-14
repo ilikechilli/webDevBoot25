@@ -53,3 +53,15 @@ li {
   height: 50%;
   display: inline-block;
 }
+
+.circleDiv {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  transition: 3s;
+}
+
+.circleDiv:hover {
+  background-color: red;
+  border-radius: 50%;
+}

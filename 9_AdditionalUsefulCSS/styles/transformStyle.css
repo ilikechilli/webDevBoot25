@@ -1,0 +1,21 @@
+.transformbox {
+  margin: 20px auto;
+  border: 3px solid black;
+  padding: 20px;
+}
+
+.transformbox:nth-of-type(4n - 3) {
+  background-color: #ffbe0b;
+}
+
+.transformbox:nth-of-type(4n - 2) {
+  background-color: #fb5607;
+}
+
+.transformbox:nth-of-type(4n - 1) {
+  background-color: #ff006e;
+}
+
+.transformbox:nth-of-type(4n) {
+  background-color: #8338ec;
+}
