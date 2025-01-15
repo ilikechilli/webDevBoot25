@@ -15,9 +15,63 @@
     <li>Media Queries!</li>
   </ul>
   <h2>What is Flexbox?</h2>
-  <p>A one dimensional layout method for laying out items in rows and  columns. It allows us to space elements dynamically as the viewport changes.</p>
+  <p>A one dimensional layout method for laying out items in rows and  columns. It allows us to space elements dynamically as the viewport changes. You can set the "display" property of the container to "flex" to initialize flexbox for a container. This will change the behavior of the container.</p>
   <h2>Flex direction</h2>
-  <p></p>
+  <p>A flexbox has two axes. By default, the main axis in flexbox is from left to right. But this can be changed using "flex-direction": By default this is set to row but the main axis can be set to:
+    <ul><li>row</li>
+    <li>row-reverse</li>
+    <li>column</li>
+    <li>column-reverse</li></ul>
+  </p>
+  <p>Even if the elements within the flexbox have a width and height set, flexbox may override this if the flexbox container does not have sufficient space to accomodate those dimensions.</p>
+
+  <h2>Justify content</h2>
+  <p>The Justify content property will determine how the content is distributed across the main axis of a flexbox container. The value is "flex-start" by default and can also be:
+    <ul>
+      <li>flex-start</li>
+      <li>flex-end: Take the content and move it to the end of the main axis</li>
+      <li>center: this will center the content on the main axis</li>
+      <li>space-between: it will distribute the empty space evenly BETWEEN the elements</li>
+      <li>space-around: space is distributed around all elements</li>
+      <li>space-evenly</li>
+    </ul>
+  </p>
+  <p>Justify content property is named strangely because the main axis can be both horizontal or vertical depending on how the flexbox container is set up.</p>
+
+  <h2>Flex wrap</h2>
+  <p>This property will determine what happens to the content of the container if the container gets smaller. By default a flexbox will shrink the elements within but changing the flex-wrap property to "wrap", it will allow the elements to wrap to a new line/column depending on if the flexbox container direction is set to row or column respectively</p>
+
+  <h2>Align Items</h2>
+  <p>The align-items property determines how content is distributed along the cross-axis. By default the cross axis is in the vertical direction but can be different depending on how the flex-direction is set. The image below demonstrates how justify content and align-items can be used to center something within a container</p>
+  <p>Align-items can be set to:
+    <ul>
+      <li>center</li>
+      <li>baseline</li>
+      <li>flex-end</li>
+      <li>flex-start</li>
+    </ul>
+  </p>
+
+  <div style="display: flex; width: 200px; height: 200px; justify-content: center; align-items: center; background-color: blue;">
+    <div style="width: 100px; height:100px; background-color: red;"></div>
+  </div>
+
+  <h2>Align-content and Aling-self</h2>
+  <p>Align content is used to distribute space acros the cross-axis. It controls space beween elements on the cross axis. It only does something if the content is wrapped. If it isn't then it does nothing.</p>
+
+  <p>Align-self is not applied to the flexbox container but to the elements themselves allowing positional control of individual elements!</p>
+
+  <h2>Flex-basis, grow and shrink</h2>
+  <p>flex-basis defines the initial size of an element before additional space is distributed.</p>
+  <p>Flex grow controls the amount of space an element should take up.</p>
+  <p>Flex-shrink controls how items shrink if they are larger then the container.</p>
+
+  <h2>Responsive design and Media Queries</h2>
+  <p>The problem is that there are many different devices with different screen sizes and orientations. The goal is to create a single website that is responsive around the device that is displaying them.</p>
+  <p>The goal is to create a single website with a single stylesheet that is able to respond to different device sizes and features.</p>
+  <h3>Media Queries</h3>
+  <p>Use "@media" to create a new media query.</p>
+  
   
 </body>
 </html>
