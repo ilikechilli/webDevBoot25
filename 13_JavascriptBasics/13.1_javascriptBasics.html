@@ -7,6 +7,121 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  
+  <h1>JavaScript Basics</h1>
+  <h2>String Methods</h2>
+  <p>Basic string methods (functions that can be performed on strings) are as follows:</p>
+  <ul>
+    <li>.length: this is a property and not a method which is made clear by the lack of parentheses</li>
+    <li>.toUpperCase(): Takes a string and creates a new version of it that is all caps.</li>
+    <li>.toLowerCase()</li>
+    <li>.trim(): trims off any white space at the beginning and / or end of a string</li>
+  </ul>
+  <p>Methods can also be chained like this: "string".trim().toUpperCase()</p>
+
+  <h2>String methods with arguments</h2>
+  <p>Some string methods allow arguments to be passed to the method between the parentheses.</p>
+  <ul>
+    <li>.indexOf("Cat"): This method will tell the user the index where a string occurs first.</li>
+    <li>.slice(beginIndex, [endIndex]): Extracts (slices) a portion of a string. The end index is optional and the beginIndex tells the user where to begin extraction</li>
+    <li>.replace("stringToReplace", "stringToInsert")</li>
+
+  </ul>
+  <h2>String Template Literals</h2>
+  <p>String Template Literals use backticks and ${} as a placeholder that can take literal javascript to do something.</p>
+
+  <h2>Null and Undefined</h2>
+  <p>Null and Undefined are primitive values in JavaScript.</p>
+  <p>Null is the <b>intentional</b> absence of a value! this is an explicit indication that nothing is there.</p>
+  <p>A variable that has no assinged value will be undefined</p>
+
+  <h2>Random numbers and the Math Object</h2>
+  <p>Pseudo random numbers can be created using "Math.random()" which will return a number between 0 and 1 which can in turn be multiplied by any range to achieve a random number in that range.</p>
+  <p>The Math Object is built into JavaScript and is a collection of properties and methods for mathematical constants and functions.</p>
+  <p>Commonly used methods in the Math object are:</p>
+  <ul>
+    <li>Math.floor(float)</li>
+    <li>Math.ceil(float)</li>
+    <li>Math.random()</li>
+  </ul>
+
+  <h2>JavaScript Decision making using boolean logic</h2>
+  <h3>Comparison Operators</h3>
+  <p>The following comparison operators are frequently used</p>
+  <ul>
+    <li>&gt;</li>
+    <li>&lt;</li>
+    <li>== or !=</li>
+    <li>=== or !==</li>
+    <li>&gt;=</li>
+    <li>&lt;=</li>
+  </ul>
+
+  <h3>Console, alert and prompt</h3>
+  <p>console.log("hello") will print out hello to the console</p>
+  <p>alert("message") will alert the user with a dialogue in the browser</p>
+  <p>prompt("message") will ask the user for input (text) with a message on what is expected. The prompts returns a string so if a number is needed it needs to be converted to a number type object using the parseInt() method.</p>
+
+  <h3>Running javascript from a javascript file</h3>
+  <p>Using the console to use javascript is not always useful so using a script is a better option.</p>
+  <p></p>
+
+  <h3>If statments</h3>
+  <p>If statements allows us to check a boolean value and make decisions based on the boolean value.</p>
+  <p>And if statement is is created as follows:</p>
+  <p>if(something === somethingElse){ <br> do Somehthing <br>   }</p>
+
+  <h3>Truthy or falsy values</h3>
+  <p>Every value in javascript have a truthy or falsy values all values are considere truthy except for:</p>
+  <p>Falsy values are:</p>
+  <ul>
+    <li>false</li>
+    <li>0 (zero)</li>
+    <li>"" (an empty string)</li>
+    <li>null</li>
+    <li>undefined</li>
+    <li>NaN</li>
+  </ul>
+
+  <h3>Logical operators</h3>
+  <ul>
+    <li>AND: &amp;&amp;</li>
+    <li>OR: || (shift + option + L on mac)</li>
+    <li>NOT: !</li>
+  </ul>
+
+  <h3>The switch statement</h3>
+  <p>The switch statment is nor very commonly used.</p>
+  <p>Do not worry about memorizing the syntax and look it up if you need it.</p>
+
+  <h2>JavaScript Arrays</h2>
+  <h3>Introduction to arrays</h3>
+  <p>Arrays are ordered collections of objects</p>
+  <p>The basic syntax for creating an arrays is = let myArray = []</p>
+  <h3>Basic built in array methods in Javascript</h3>
+  <ul>
+    <li>.length (This is a property and not a method)</li>
+    <li>.push("something"): The push method adds the something to the end of the array. It also returns the new length of the array after pushing the something to the array.</li>
+    <li>.pop(): This method removes the last item in the array (and returns this item)</li>
+    <li>.shift("something"): This essentially does the same as pop but at the beginning of the array</li>
+    <li>.unshift(): This does the same as push but adds someting at the beginning of the array.</li>
+    <li>concat(): merges arrays</li>
+    <li>.includes("something"): if an array includes a particular value it will return true; it returns false if the array does not contain the searched item.</li>
+    <li>.indexOf(): This returns the index if an item in an array if the array contains this item. It returns -1 if the item is not in the array.</li>
+    <li>.reverse(): This method reverses the array in place. This means that the original array is destroyed and replaced with the reverse.</li>
+    <li>.slice(begin, end): This returns a copy or a portion of an array defined by a begin and up to but not including the end index. The arguments are optional. Providing no indices will return the whole array. </li>
+    <li>.splice(startingindex, number of items to remove, insert): removes a range of items from an array and returns these items as an array. It also modifies the array permanently.  Splice can also be used to insert something into an array if provided with a thrird argument</li>
+    <li>.sort(): This method has limited use because the default use to sort things is by converting everything to a string and then comparing the UTF rating to one another. This means that numbers will not be sorted realiably. To sort numbers it is more useful to create our own sorting functions that will be revisited later.</li>
+  </ul>
+
+  <h3>Equality testing of arrays</h3>
+  <p>Using the === or == operators on arryas won't work because of how javascript uses comparison. This is because of how arrays use memory. </p>
+
+  <h3>Arrays and "const"</h3>
+  <p>Arrays can be created using the "const" keyword and the array contents can be changed. But using the const keyword will ensure that an array can not be reassigned in memory (the address)</p>
+
+  <h3>Multi dimensional array</h3>
+  <p>These are nested arrays which means as much as: Arrays can contain arrays!</p>
+
+<script src="app.js"></script>
 </body>
 </html>
