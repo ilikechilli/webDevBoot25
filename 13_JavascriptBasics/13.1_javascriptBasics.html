@@ -128,8 +128,13 @@
   <h2>Javascript Loops</h2>
   <h3>FOR-loops</h3>
   <p>For loops allow the repetition of code for a set number of times. This number is defined when writing the for loop. Writing the for loop involves settin an initial condition for a temporary variable and a condition where the loop should stop. Finally the variable is changed (often incremented or decremented) until it is changed to match the stopping condition. As long as the stop condition evaluates to true, the code will keep going.</p>
+  <p>Watch out for infinite loops, both with For-loops and While-loops. For loops can run infinitely when the stopping condition would never be met. Make sure to use the right symbols for the condition at which the loop should stop.</p>
+  <h3>Looping over arrays</h3>
+  <p>One option to loop (iterate) over an array is to use a for-loop using the i variable as the arrays index. You can set the stop condition using the array.length property.</p>
+  <p></p>
 
 
 <script src="app.js"></script>
+<script src="guessinggame.js"></script>
 </body>
 </html>
