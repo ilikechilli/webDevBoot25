@@ -19,6 +19,26 @@
   <p>Functions can be defined using multiple parameters. This is as simple as adding those parameters when creating the function but keep in mind that this is order-sensitive.</p>
   <p>If parameters are defined when creating the function, you can ignore passing some arguments unless they are required by the function in which case you will get an error.</p>
 
+  <h2>Intermediate function concepts</h2>
+  <h3>Scope</h3>
+  <p>Scope refers to variable visbility. Where is a variable seen in the code? You will see that variables defined inide a function declaration are not available to other parts of the script.</p>
+  <h4>Block scope</h4>
+  <p>Using the let keyword to define a function will make sure that the variable is scoped. It will not be available outside of the "block-scope" where the variable is defined. However, if the variable is defined using the "var" keyword, it will be available outside the block scope. It is generally not recommended to use the "var" keyword and define variables within the scope that they are going to be used. Also keep in mind that a "let" variable can be redefined within a block and will only exist there while the original definition remains valid outside that scope. Weird stuff but it's usefull to know!</p>
+  <h4>Lexical scope</h4>
+  <p>An inner function defined withing another function definition has access to the variables defined in the parent function.</p>
+
+  <h3>Function expressions</h3>
+  <p>Functions can be defined using the function keyword but can also be defined as an expression. This involves storing a function inside a variable!</p>
+
+  <h3>Higher Order Function</h3>
+  <p>This comprises two main things:</p>
+  <ol>
+    <li>Accept other functions as arguments</li>
+    <li>Returns a function</li>
+  </ol>
+  
+
+
   <script src="app.js"></script>
 </body>
 </html>
