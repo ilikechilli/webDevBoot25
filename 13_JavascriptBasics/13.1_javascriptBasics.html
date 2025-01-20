@@ -131,10 +131,16 @@
   <p>Watch out for infinite loops, both with For-loops and While-loops. For loops can run infinitely when the stopping condition would never be met. Make sure to use the right symbols for the condition at which the loop should stop.</p>
   <h3>Looping over arrays</h3>
   <p>One option to loop (iterate) over an array is to use a for-loop using the i variable as the arrays index. You can set the stop condition using the array.length property.</p>
-  <p></p>
+  <h3>The For... of loop</h3>
+  <p>The for...of loop addresses the cluttered syntax of a for loop when iterating over an iterable item like an array.</p>
+  <p>The syntax: for(<b>let</b> item <b>of</b> iterable){Do something with item}</p>
+  <p>The for...of loop also works on strings, maps, sets, arrays but is not recommended for objects.</p>
+  <h3>Iterating over Object literals with the for...in loop</h3>
+  <p>The Object literal is not considered an iterable in JavaScript. This means that a for...of loop will not work to iterate over an object.</p>
+  <p>Javascript allows iteration through an object literal by using the for...in loop. The for in loop loops over the keys of an object literal.</p>
+  <p>In addition to the for...in loop you can also use Object.keys("objectLiteral") which will return all the keys of an object. This is complemented by the Object.values("objectLiteral") method which will return all the values in an object. Finally, the Object.entries("objectLiteral") method returns a nested array of key-value pairs.</p>
 
 
 <script src="app.js"></script>
-<script src="guessinggame.js"></script>
 </body>
 </html>
