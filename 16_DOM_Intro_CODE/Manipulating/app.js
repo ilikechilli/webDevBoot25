@@ -15,3 +15,5 @@ const allImages = document.getElementsByTagName("img");
 for (let i = 0; i < allImages.length; i++){
     console.log(allImages[i].src);
 }
+
+
