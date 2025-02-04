@@ -8,6 +8,16 @@ for (let i = 1; i <= 151; i++){
   pkmimg.src = `${baseURL}${i}.png`;
   const tag =  document.createElement("span");
   tag.innerHTML = `#${i}`;
+  tag.classList.add("showtag");
+
+  pokemon.addEventListener("mouseenter", () => {
+    tag.classList.remove("showtag");
+  })
+
+  pokemon.addEventListener("mouseleave", () => {
+    tag.classList.add("showtag");
+  }
+)
 
   pokemon.appendChild(pkmimg);
   pokemon.appendChild(tag);

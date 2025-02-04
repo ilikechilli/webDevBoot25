@@ -5,3 +5,7 @@
 .pokemon img {
     display: block;
 }
+
+.showtag {
+    display: none;
+}
