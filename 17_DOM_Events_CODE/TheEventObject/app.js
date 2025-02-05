@@ -12,6 +12,7 @@ document.querySelector('button').addEventListener('click', function (evt) {
 // })
 
 window.addEventListener('keydown', function (e) {
+    console.log(e);
     switch (e.code) {
         case 'ArrowUp':
             console.log("UP!");
