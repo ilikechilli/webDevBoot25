@@ -16,12 +16,14 @@ req.onload = function() {
 }
 
 req.onerror = function() {
-  console.log("Errori");
+  console.log("Error");
   console.log(this);
 }
 
 req.open("GET", reqUrl);
 req.send();
+
+console.log(req.onload);
 
 const clearbutton = document.querySelector("#clearbutton")
 clearbutton.addEventListener("click", () => {
