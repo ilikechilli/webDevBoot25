@@ -1,0 +1,3 @@
+This short project should render a page to the user where the user can enter two numbers between which a random number will be generated.
+This means that the page should except user input which will be delivered to the backend after which the back-end will render another page with a random number that is between the number that were first specified by the user.
+
