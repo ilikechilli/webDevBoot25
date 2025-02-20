@@ -1,0 +1,19 @@
+{
+  "name": "pokedex-one",
+  "version": "1.0.0",
+  "description": "A pokedex website based on a JSON database with all pokemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Pokedex",
+    "JSON"
+  ],
+  "author": "ilikechilli",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
